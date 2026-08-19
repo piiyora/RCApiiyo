@@ -2,13 +2,17 @@
    基本設定
 ========================= */
 
+* {
+    box-sizing: border-box;
+}
+
 html {
     scroll-behavior: smooth;
 }
 
 body {
-
     margin: 0;
+    padding: 0;
 
     background: #f8f7ff;
 
@@ -18,28 +22,32 @@ body {
         -apple-system,
         BlinkMacSystemFont,
         "Helvetica Neue",
+        "Hiragino Kaku Gothic ProN",
+        "Yu Gothic",
         sans-serif;
+
+    overflow-x: hidden;
 }
 
 
 /* =========================
-   Loading
+   Loading画面
 ========================= */
 
 #loading {
-
     position: fixed;
 
     inset: 0;
 
+    width: 100%;
+    height: 100%;
+
     background: #f8f7ff;
 
     display: flex;
-
     flex-direction: column;
 
     justify-content: center;
-
     align-items: center;
 
     z-index: 9999;
@@ -49,30 +57,39 @@ body {
     transition: opacity 0.5s ease;
 }
 
+
+/* Loading画像 */
+
 #loading img {
-
     width: 120px;
-
     height: 120px;
 
     object-fit: contain;
 
-    animation: float 1.5s ease-in-out infinite;
+    animation:
+        loadingFloat 1.5s ease-in-out infinite;
 }
 
-#loading p {
 
-    margin-top: 15px;
+/* Loading文字 */
+
+#loading p {
+    margin: 15px 0 0;
 
     font-size: 20px;
 
     color: #555;
 
-    animation: textFloat 1.5s ease-in-out infinite;
+    animation:
+        loadingTextFloat 1.5s ease-in-out infinite;
 }
 
 
-@keyframes float {
+/* =========================
+   Loadingアニメーション
+========================= */
+
+@keyframes loadingFloat {
 
     0%,
     100% {
@@ -85,7 +102,7 @@ body {
 }
 
 
-@keyframes textFloat {
+@keyframes loadingTextFloat {
 
     0%,
     100% {
@@ -103,14 +120,15 @@ body {
 ========================= */
 
 header {
-
     position: sticky;
 
     top: 0;
 
     z-index: 100;
 
-    height: 70px;
+    width: 100%;
+
+    min-height: 70px;
 
     display: flex;
 
@@ -120,34 +138,43 @@ header {
 
     padding: 0 8%;
 
-    background: rgba(248, 247, 255, 0.85);
+    background:
+        rgba(248, 247, 255, 0.88);
 
     backdrop-filter: blur(12px);
 
-    border-bottom: 1px solid rgba(0, 0, 0, 0.05);
+    -webkit-backdrop-filter: blur(12px);
+
+    border-bottom:
+        1px solid rgba(0, 0, 0, 0.05);
 }
 
 
-.logo {
+/* ロゴ */
 
+.logo {
     font-size: 22px;
 
     font-weight: bold;
 
     color: #6c63ff;
+
+    white-space: nowrap;
 }
 
 
-nav {
+/* ナビゲーション */
 
+nav {
     display: flex;
+
+    align-items: center;
 
     gap: 30px;
 }
 
 
 nav a {
-
     color: #555;
 
     text-decoration: none;
@@ -156,21 +183,23 @@ nav a {
 
     font-weight: bold;
 
+    white-space: nowrap;
+
     transition: 0.3s;
 }
 
 
 nav a:hover {
-
     color: #6c63ff;
 }
 
 
 /* =========================
-   HERO
+   HOME
 ========================= */
 
 .hero {
+    width: 100%;
 
     min-height: 75vh;
 
@@ -182,19 +211,26 @@ nav a:hover {
 
     gap: 80px;
 
-    padding: 80px 8%;
+    padding:
+        80px 8%;
 
-    box-sizing: border-box;
+    overflow: hidden;
 }
 
 
+/* 左側 */
+
 .hero-text {
+    width: 100%;
 
     max-width: 550px;
 }
 
 
+/* 小さいタイトル */
+
 .small-title {
+    margin: 0;
 
     color: #6c63ff;
 
@@ -206,17 +242,24 @@ nav a:hover {
 }
 
 
-h1 {
+/* メインタイトル */
 
-    margin: 15px 0;
+h1 {
+    margin:
+        15px 0 20px;
+
+    color: #333;
 
     font-size: 64px;
 
-    color: #333;
+    line-height: 1.2;
 }
 
 
+/* 説明 */
+
 .description {
+    margin: 0;
 
     color: #666;
 
@@ -226,15 +269,43 @@ h1 {
 }
 
 
-.hero-image img {
+/* =========================
+   イラスト
+========================= */
 
+.hero-image {
+    flex-shrink: 0;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+}
+
+
+.hero-image img {
     width: 280px;
 
     height: 280px;
 
     object-fit: contain;
 
-    animation: float 3s ease-in-out infinite;
+    animation:
+        heroFloat 3s ease-in-out infinite;
+}
+
+
+@keyframes heroFloat {
+
+    0%,
+    100% {
+        transform: translateY(0);
+    }
+
+    50% {
+        transform: translateY(-10px);
+    }
 }
 
 
@@ -243,8 +314,9 @@ h1 {
 ========================= */
 
 .buttons {
-
     display: flex;
+
+    flex-wrap: wrap;
 
     gap: 15px;
 
@@ -253,10 +325,10 @@ h1 {
 
 
 .button {
-
     display: inline-block;
 
-    padding: 14px 28px;
+    padding:
+        14px 28px;
 
     border-radius: 30px;
 
@@ -266,6 +338,8 @@ h1 {
 
     text-decoration: none;
 
+    font-size: 14px;
+
     font-weight: bold;
 
     transition: 0.3s;
@@ -273,20 +347,21 @@ h1 {
 
 
 .button:hover {
-
     transform: translateY(-3px);
 
-    box-shadow: 0 8px 20px rgba(108, 99, 255, 0.25);
+    box-shadow:
+        0 8px 20px
+        rgba(108, 99, 255, 0.25);
 }
 
 
 .button.secondary {
-
     background: white;
 
     color: #6c63ff;
 
-    border: 2px solid #6c63ff;
+    border:
+        2px solid #6c63ff;
 }
 
 
@@ -295,16 +370,19 @@ h1 {
 ========================= */
 
 .section {
+    width: 100%;
 
     max-width: 900px;
 
     margin: 0 auto;
 
-    padding: 120px 20px;
+    padding:
+        120px 20px;
 }
 
 
 .section-title {
+    margin: 0;
 
     color: #6c63ff;
 
@@ -319,16 +397,21 @@ h1 {
 
 
 h2 {
+    margin:
+        15px 0 40px;
 
     text-align: center;
 
     font-size: 36px;
 
-    margin-bottom: 40px;
+    line-height: 1.4;
 }
 
 
+/* カード */
+
 .card {
+    width: 100%;
 
     padding: 40px;
 
@@ -337,13 +420,15 @@ h2 {
     border-radius: 25px;
 
     box-shadow:
-        0 10px 30px rgba(0, 0, 0, 0.06);
+        0 10px 30px
+        rgba(0, 0, 0, 0.06);
 
     text-align: center;
 }
 
 
 .card p {
+    margin: 0;
 
     color: #666;
 
@@ -358,8 +443,9 @@ h2 {
 ========================= */
 
 footer {
+    width: 100%;
 
-    padding: 30px;
+    padding: 30px 20px;
 
     text-align: center;
 
@@ -370,93 +456,223 @@ footer {
 
 
 /* =========================
+   タブレット
+========================= */
+
+@media (max-width: 900px) {
+
+    header {
+        padding:
+            0 30px;
+    }
+
+
+    .hero {
+        gap: 40px;
+
+        padding:
+            70px 30px;
+    }
+
+
+    h1 {
+        font-size: 52px;
+    }
+
+
+    .hero-image img {
+        width: 230px;
+        height: 230px;
+    }
+
+}
+
+
+/* =========================
    スマホ
 ========================= */
 
 @media (max-width: 700px) {
 
     header {
+        min-height: 60px;
 
-        padding: 0 20px;
+        padding:
+            0 16px;
+    }
 
+
+    .logo {
+        font-size: 17px;
     }
 
 
     nav {
-
-        gap: 12px;
-
+        gap: 10px;
     }
 
 
     nav a {
-
-        font-size: 11px;
-
+        font-size: 10px;
     }
 
 
+    /* HOME */
+
     .hero {
+        min-height: auto;
 
         flex-direction: column;
 
         text-align: center;
 
-        gap: 40px;
+        gap: 25px;
 
-        padding: 70px 20px;
+        padding:
+            60px 20px 80px;
+    }
 
+
+    .hero-text {
+        width: 100%;
+
+        max-width: 100%;
+    }
+
+
+    .small-title {
+        font-size: 11px;
+
+        letter-spacing: 2px;
     }
 
 
     h1 {
+        font-size: 38px;
 
-        font-size: 46px;
+        line-height: 1.2;
 
+        margin:
+            12px 0 18px;
     }
 
 
     .description {
+        font-size: 15px;
 
-        font-size: 16px;
-
+        line-height: 1.8;
     }
 
 
-    .hero-image img {
-
-        width: 200px;
-
-        height: 200px;
-
-    }
-
+    /* ボタン */
 
     .buttons {
-
         justify-content: center;
 
+        gap: 10px;
+
+        margin-top: 25px;
     }
 
 
+    .button {
+        padding:
+            12px 22px;
+
+        font-size: 14px;
+    }
+
+
+    /* イラスト */
+
+    .hero-image img {
+        width: 180px;
+
+        height: 180px;
+    }
+
+
+    /* セクション */
+
     .section {
+        padding:
+            70px 20px;
+    }
 
-        padding: 90px 20px;
 
+    .section-title {
+        font-size: 12px;
     }
 
 
     h2 {
+        font-size: 28px;
 
-        font-size: 30px;
-
+        margin-bottom: 30px;
     }
 
 
     .card {
+        padding:
+            25px 18px;
 
-        padding: 30px 20px;
+        border-radius: 20px;
+    }
 
+
+    .card p {
+        font-size: 15px;
+
+        line-height: 1.8;
+    }
+
+
+    /* Loading */
+
+    #loading img {
+        width: 90px;
+
+        height: 90px;
+    }
+
+
+    #loading p {
+        font-size: 17px;
+    }
+
+}
+
+
+/* =========================
+   小さいスマホ
+========================= */
+
+@media (max-width: 380px) {
+
+    .logo {
+        font-size: 15px;
+    }
+
+
+    nav {
+        gap: 7px;
+    }
+
+
+    nav a {
+        font-size: 9px;
+    }
+
+
+    h1 {
+        font-size: 34px;
+    }
+
+
+    .hero-image img {
+        width: 150px;
+
+        height: 150px;
     }
 
 }
