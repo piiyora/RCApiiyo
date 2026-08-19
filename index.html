@@ -3,14 +3,193 @@
 
 <head>
     <meta charset="UTF-8">
+
+    <!-- スマホ対応 -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <!-- サイトタイトル -->
     <title>RCA/ぴよぉのホームページ</title>
+
+    <!-- CSS -->
     <link rel="stylesheet" href="style.css">
+
+    <!-- ファビコン -->
     <link rel="icon" type="image/png" href="cat.png?v=2">
 </head>
 
 <body>
-    <h1>こんにちは！</h1>
-    <p>これは私のホームページです。</p>
+
+    <!-- =========================
+         Loading画面
+    ========================== -->
+
+    <div id="loading">
+
+        <img src="cat.png" alt="Loading">
+
+        <p>Loading...</p>
+
+    </div>
+
+
+    <!-- =========================
+         ヘッダー
+    ========================== -->
+
+    <header>
+
+        <div class="logo">
+            RCA/ぴよぉ
+        </div>
+
+        <nav>
+            <a href="#home">HOME</a>
+            <a href="#profile">PROFILE</a>
+            <a href="#about">ABOUT</a>
+        </nav>
+
+    </header>
+
+
+    <!-- =========================
+         メイン
+    ========================== -->
+
+    <main>
+
+        <!-- HOME -->
+
+        <section id="home" class="hero">
+
+            <div class="hero-text">
+
+                <p class="small-title">
+                    WELCOME TO MY WEBSITE
+                </p>
+
+                <h1>
+                    こんにちは！
+                </h1>
+
+                <p class="description">
+                    RCA/ぴよぉのホームページへようこそ。<br>
+                    ここでは私のことや、ゲームに関してのことを紹介しています。
+                </p>
+
+                <div class="buttons">
+
+                    <a href="#profile" class="button">
+                        PROFILE
+                    </a>
+
+                    <a href="#about" class="button secondary">
+                        ABOUT
+                    </a>
+
+                </div>
+
+            </div>
+
+
+            <div class="hero-image">
+
+                <img src="cat.png" alt="イラスト">
+
+            </div>
+
+        </section>
+
+
+        <!-- PROFILE -->
+
+        <section id="profile" class="section">
+
+            <p class="section-title">
+                PROFILE
+            </p>
+
+            <h2>
+                ぴよぉについて
+            </h2>
+
+            <div class="card">
+
+                <p>
+                    こんにちは！ぴよぉです。<br>
+                    このサイトでは、趣味や制作したものなどを紹介しています。<br>
+                    minecraftの情報やプライベートの写真もたまに載せます...
+                </p>
+
+            </div>
+
+        </section>
+
+
+        <!-- ABOUT -->
+
+        <section id="about" class="section">
+
+            <p class="section-title">
+                ABOUT
+            </p>
+
+            <h2>
+                このサイトについて
+            </h2>
+
+            <div class="card">
+
+                <p>
+                    このホームページはHTML・CSS・JavaScriptを使って制作しています。
+                </p>
+
+            </div>
+
+        </section>
+
+    </main>
+
+
+    <!-- =========================
+         フッター
+    ========================== -->
+
+    <footer>
+
+        <p>
+            © 2026 RCA/ぴよぉ
+        </p>
+
+    </footer>
+
+
+    <!-- =========================
+         Loading終了処理
+    ========================== -->
+
+    <script>
+
+        window.addEventListener("load", function () {
+
+            const loading =
+                document.getElementById("loading");
+
+            setTimeout(function () {
+
+                loading.style.opacity = "0";
+
+                setTimeout(function () {
+
+                    loading.style.display = "none";
+
+                }, 500);
+
+            }, 1000);
+
+        });
+
+    </script>
+
 </body>
 
 </html>
