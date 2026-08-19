@@ -11,11 +11,12 @@
     <title>RCA/ぴよぉのホームページ</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=4">
+    <link rel="stylesheet" href="style.css?v=5">
 
     <!-- ファビコン -->
-    <link rel="icon" type="image/png" href="cat.png?v=4">
+    <link rel="icon" type="image/png" href="cat.png?v=5">
 </head>
+
 
 <body>
 
@@ -25,9 +26,11 @@
 
     <div id="loading">
 
-        <img src="cat.png?v=4" alt="Loading">
+        <img src="cat.png?v=5" alt="Loading">
 
-        <p>Loading<span class="dots">...</span></p>
+        <p>
+            Loading<span class="dots">...</span>
+        </p>
 
     </div>
 
@@ -43,9 +46,23 @@
         </div>
 
         <nav>
-            <a href="#home">HOME</a>
-            <a href="#profile">PROFILE</a>
-            <a href="#about">ABOUT</a>
+
+            <a href="#home">
+                HOME
+            </a>
+
+            <a href="#profile">
+                PROFILE
+            </a>
+
+            <a href="#links">
+                LINKS
+            </a>
+
+            <a href="#about">
+                ABOUT
+            </a>
+
         </nav>
 
     </header>
@@ -57,7 +74,10 @@
 
     <main>
 
-        <!-- HOME -->
+
+        <!-- =========================
+             HOME
+        ========================== -->
 
         <section id="home" class="hero">
 
@@ -72,18 +92,30 @@
                 </h1>
 
                 <p class="description">
+
                     RCA/ぴよぉのホームページへようこそ。<br>
-                    ここでは私のことや、いろいろな作品を紹介しています。
+
+                    ここでは私のことや、<br>
+                    いろいろな作品を紹介しています。
+
                 </p>
+
 
                 <div class="buttons">
 
-                    <a href="#profile" class="button">
+                    <a
+                        href="#profile"
+                        class="button"
+                    >
                         PROFILE
                     </a>
 
-                    <a href="#about" class="button secondary">
-                        ABOUT
+
+                    <a
+                        href="#links"
+                        class="button secondary"
+                    >
+                        LINKS
                     </a>
 
                 </div>
@@ -91,32 +123,48 @@
             </div>
 
 
+            <!-- メイン画像 -->
+
             <div class="hero-image">
 
-                <img src="cat.png?v=4" alt="猫のイラスト">
+                <img
+                    src="cat.png?v=5"
+                    alt="猫のイラスト"
+                >
 
             </div>
 
         </section>
 
 
-        <!-- PROFILE -->
 
-        <section id="profile" class="section">
+        <!-- =========================
+             PROFILE
+        ========================== -->
+
+        <section
+            id="profile"
+            class="section"
+        >
 
             <p class="section-title">
                 PROFILE
             </p>
 
+
             <h2>
                 ぴよぉについて
             </h2>
 
+
             <div class="card">
 
                 <p>
+
                     こんにちは！ぴよぉです。<br>
+
                     このサイトでは、趣味や制作したものなどを紹介しています。
+
                 </p>
 
             </div>
@@ -124,29 +172,141 @@
         </section>
 
 
-        <!-- ABOUT -->
 
-        <section id="about" class="section">
+        <!-- =========================
+             LINKS
+        ========================== -->
+
+        <section
+            id="links"
+            class="section"
+        >
+
+            <p class="section-title">
+                LINKS
+            </p>
+
+
+            <h2>
+                MY LINKS
+            </h2>
+
+
+            <div class="links">
+
+
+                <!-- The Hive -->
+
+                <a
+                    href="https://playhive.com/profile/RCAprayers"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link-card"
+                >
+
+                    <span class="link-icon">
+                        🐝
+                    </span>
+
+
+                    <span class="link-info">
+
+                        <strong>
+                            The Hive
+                        </strong>
+
+                        <small>
+                            RCAprayers
+                        </small>
+
+                    </span>
+
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+
+
+                <!-- Instagram -->
+
+                <a
+                    href="https://www.instagram.com/yuki37136/?hl=ja"
+                    target="_blank"
+                    rel="noopener noreferrer"
+                    class="link-card"
+                >
+
+                    <span class="link-icon">
+                        📷
+                    </span>
+
+
+                    <span class="link-info">
+
+                        <strong>
+                            Instagram
+                        </strong>
+
+                        <small>
+                            @yuki37136
+                        </small>
+
+                    </span>
+
+
+                    <span class="arrow">
+                        →
+                    </span>
+
+                </a>
+
+            </div>
+
+        </section>
+
+
+
+        <!-- =========================
+             ABOUT
+        ========================== -->
+
+        <section
+            id="about"
+            class="section"
+        >
 
             <p class="section-title">
                 ABOUT
             </p>
 
+
             <h2>
                 このサイトについて
             </h2>
 
+
             <div class="card">
 
                 <p>
-                    このホームページはHTML・CSS・JavaScriptを使って制作しています。
+
+                    このホームページは<br>
+
+                    HTML・CSS・JavaScriptを使って<br>
+
+                    制作しています。
+
                 </p>
 
             </div>
 
         </section>
 
+
     </main>
+
 
 
     <!-- =========================
@@ -162,32 +322,50 @@
     </footer>
 
 
+
     <!-- =========================
          Loading Script
     ========================== -->
 
     <script>
 
-        window.addEventListener("load", function () {
+        document.addEventListener(
+            "DOMContentLoaded",
+            function () {
 
-            const loading =
-                document.getElementById("loading");
+                const loading =
+                    document.getElementById("loading");
 
-            setTimeout(function () {
 
-                loading.classList.add("hide");
+                /*
+                 * ページが表示されたあと
+                 * 1秒待ってLoadingを消す
+                 */
 
                 setTimeout(function () {
 
-                    loading.style.display = "none";
+                    loading.classList.add("hide");
 
-                }, 500);
 
-            }, 1000);
+                    /*
+                     * フェードアウト終了後に
+                     * Loadingを完全に消す
+                     */
 
-        });
+                    setTimeout(function () {
+
+                        loading.style.display = "none";
+
+                    }, 500);
+
+                }, 1000);
+
+            }
+
+        );
 
     </script>
+
 
 </body>
 
