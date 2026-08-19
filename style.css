@@ -14,6 +14,8 @@ body {
     margin: 0;
     padding: 0;
 
+    width: 100%;
+
     background: #f8f7ff;
 
     color: #333;
@@ -31,7 +33,7 @@ body {
 
 
 /* =========================
-   Loading画面
+   Loading
 ========================= */
 
 #loading {
@@ -39,15 +41,17 @@ body {
 
     inset: 0;
 
-    width: 100%;
-    height: 100%;
+    width: 100vw;
+    height: 100vh;
 
     background: #f8f7ff;
 
     display: flex;
+
     flex-direction: column;
 
     justify-content: center;
+
     align-items: center;
 
     z-index: 9999;
@@ -58,7 +62,10 @@ body {
 }
 
 
-/* Loading画像 */
+#loading.hide {
+    opacity: 0;
+}
+
 
 #loading img {
     width: 120px;
@@ -71,52 +78,36 @@ body {
 }
 
 
-/* Loading文字 */
-
 #loading p {
     margin: 15px 0 0;
 
     font-size: 20px;
 
     color: #555;
-
-    animation:
-        loadingTextFloat 1.5s ease-in-out infinite;
 }
 
 
-/* =========================
-   Loadingアニメーション
-========================= */
+/* Loading画像 */
 
 @keyframes loadingFloat {
 
-    0%,
-    100% {
+    0% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-12px);
     }
-}
 
-
-@keyframes loadingTextFloat {
-
-    0%,
     100% {
         transform: translateY(0);
     }
 
-    50% {
-        transform: translateY(-5px);
-    }
 }
 
 
 /* =========================
-   ヘッダー
+   Header
 ========================= */
 
 header {
@@ -139,7 +130,7 @@ header {
     padding: 0 8%;
 
     background:
-        rgba(248, 247, 255, 0.88);
+        rgba(248, 247, 255, 0.9);
 
     backdrop-filter: blur(12px);
 
@@ -149,8 +140,6 @@ header {
         1px solid rgba(0, 0, 0, 0.05);
 }
 
-
-/* ロゴ */
 
 .logo {
     font-size: 22px;
@@ -162,8 +151,6 @@ header {
     white-space: nowrap;
 }
 
-
-/* ナビゲーション */
 
 nav {
     display: flex;
@@ -185,7 +172,7 @@ nav a {
 
     white-space: nowrap;
 
-    transition: 0.3s;
+    transition: color 0.3s ease;
 }
 
 
@@ -195,7 +182,7 @@ nav a:hover {
 
 
 /* =========================
-   HOME
+   Hero
 ========================= */
 
 .hero {
@@ -211,14 +198,9 @@ nav a:hover {
 
     gap: 80px;
 
-    padding:
-        80px 8%;
-
-    overflow: hidden;
+    padding: 80px 8%;
 }
 
-
-/* 左側 */
 
 .hero-text {
     width: 100%;
@@ -226,8 +208,6 @@ nav a:hover {
     max-width: 550px;
 }
 
-
-/* 小さいタイトル */
 
 .small-title {
     margin: 0;
@@ -242,11 +222,8 @@ nav a:hover {
 }
 
 
-/* メインタイトル */
-
 h1 {
-    margin:
-        15px 0 20px;
+    margin: 15px 0 20px;
 
     color: #333;
 
@@ -255,8 +232,6 @@ h1 {
     line-height: 1.2;
 }
 
-
-/* 説明 */
 
 .description {
     margin: 0;
@@ -270,7 +245,7 @@ h1 {
 
 
 /* =========================
-   イラスト
+   Hero Image
 ========================= */
 
 .hero-image {
@@ -278,13 +253,15 @@ h1 {
 
     display: flex;
 
-    justify-content: center;
-
     align-items: center;
+
+    justify-content: center;
 }
 
 
 .hero-image img {
+    display: block;
+
     width: 280px;
 
     height: 280px;
@@ -298,19 +275,23 @@ h1 {
 
 @keyframes heroFloat {
 
-    0%,
-    100% {
+    0% {
         transform: translateY(0);
     }
 
     50% {
         transform: translateY(-10px);
     }
+
+    100% {
+        transform: translateY(0);
+    }
+
 }
 
 
 /* =========================
-   ボタン
+   Buttons
 ========================= */
 
 .buttons {
@@ -327,8 +308,7 @@ h1 {
 .button {
     display: inline-block;
 
-    padding:
-        14px 28px;
+    padding: 14px 28px;
 
     border-radius: 30px;
 
@@ -342,7 +322,9 @@ h1 {
 
     font-weight: bold;
 
-    transition: 0.3s;
+    transition:
+        transform 0.3s ease,
+        box-shadow 0.3s ease;
 }
 
 
@@ -360,13 +342,12 @@ h1 {
 
     color: #6c63ff;
 
-    border:
-        2px solid #6c63ff;
+    border: 2px solid #6c63ff;
 }
 
 
 /* =========================
-   セクション
+   Sections
 ========================= */
 
 .section {
@@ -376,8 +357,7 @@ h1 {
 
     margin: 0 auto;
 
-    padding:
-        120px 20px;
+    padding: 120px 20px;
 }
 
 
@@ -408,8 +388,6 @@ h2 {
 }
 
 
-/* カード */
-
 .card {
     width: 100%;
 
@@ -439,7 +417,7 @@ h2 {
 
 
 /* =========================
-   フッター
+   Footer
 ========================= */
 
 footer {
@@ -456,14 +434,13 @@ footer {
 
 
 /* =========================
-   タブレット
+   Tablet
 ========================= */
 
 @media (max-width: 900px) {
 
     header {
-        padding:
-            0 30px;
+        padding: 0 30px;
     }
 
 
@@ -489,7 +466,7 @@ footer {
 
 
 /* =========================
-   スマホ
+   Smartphone
 ========================= */
 
 @media (max-width: 700px) {
@@ -517,7 +494,7 @@ footer {
     }
 
 
-    /* HOME */
+    /* Hero */
 
     .hero {
         min-height: auto;
@@ -564,7 +541,7 @@ footer {
     }
 
 
-    /* ボタン */
+    /* Buttons */
 
     .buttons {
         justify-content: center;
@@ -583,16 +560,25 @@ footer {
     }
 
 
-    /* イラスト */
+    /* Image */
+
+    .hero-image {
+        width: 100%;
+    }
+
 
     .hero-image img {
         width: 180px;
 
         height: 180px;
+
+        max-width: 60vw;
+
+        max-height: 60vw;
     }
 
 
-    /* セクション */
+    /* Sections */
 
     .section {
         padding:
@@ -644,7 +630,7 @@ footer {
 
 
 /* =========================
-   小さいスマホ
+   Small Smartphone
 ========================= */
 
 @media (max-width: 380px) {
@@ -673,6 +659,10 @@ footer {
         width: 150px;
 
         height: 150px;
+
+        max-width: 50vw;
+
+        max-height: 50vw;
     }
 
 }

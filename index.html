@@ -4,36 +4,36 @@
 <head>
     <meta charset="UTF-8">
 
-    <!-- スマホ・タブレット対応 -->
+    <!-- スマホ対応 -->
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <!-- サイトタイトル -->
     <title>RCA/ぴよぉのホームページ</title>
 
     <!-- CSS -->
-    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="style.css?v=4">
 
     <!-- ファビコン -->
-    <link rel="icon" type="image/png" href="irasuto1.png?v=2">
+    <link rel="icon" type="image/png" href="cat.png?v=4">
 </head>
 
 <body>
 
     <!-- =========================
-         Loading画面
+         Loading
     ========================== -->
 
     <div id="loading">
 
-        <img src="irasuto1.png" alt="Loading">
+        <img src="cat.png?v=4" alt="Loading">
 
-        <p>Loading...</p>
+        <p>Loading<span class="dots">...</span></p>
 
     </div>
 
 
     <!-- =========================
-         ヘッダー
+         Header
     ========================== -->
 
     <header>
@@ -52,7 +52,7 @@
 
 
     <!-- =========================
-         メイン
+         Main
     ========================== -->
 
     <main>
@@ -93,7 +93,7 @@
 
             <div class="hero-image">
 
-                <img src="irasuto1.png" alt="イラスト">
+                <img src="cat.png?v=4" alt="猫のイラスト">
 
             </div>
 
@@ -150,7 +150,7 @@
 
 
     <!-- =========================
-         フッター
+         Footer
     ========================== -->
 
     <footer>
@@ -163,7 +163,7 @@
 
 
     <!-- =========================
-         Loading終了処理
+         Loading Script
     ========================== -->
 
     <script>
@@ -175,7 +175,7 @@
 
             setTimeout(function () {
 
-                loading.style.opacity = "0";
+                loading.classList.add("hide");
 
                 setTimeout(function () {
 
