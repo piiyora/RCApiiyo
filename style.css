@@ -18,7 +18,9 @@
 html {
     width: 100%;
     min-height: 100%;
+
     scroll-behavior: smooth;
+
     -webkit-text-size-adjust: 100%;
     text-size-adjust: 100%;
 }
@@ -26,6 +28,7 @@ html {
 body {
     width: 100%;
     min-height: 100vh;
+
     margin: 0;
     padding: 0;
 
@@ -109,9 +112,12 @@ a {
     align-items: center;
     justify-content: center;
 
-    background: rgba(255, 255, 255, 0.85);
+    background:
+        rgba(255, 255, 255, 0.85);
 
-    border: 3px solid rgba(255, 255, 255, 0.95);
+    border:
+        3px solid
+        rgba(255, 255, 255, 0.95);
 
     border-radius: 38px;
 
@@ -136,7 +142,6 @@ a {
     object-fit: contain;
 
     border: 0;
-
     box-shadow: none;
 }
 
@@ -215,7 +220,6 @@ header {
 
 nav {
     display: flex;
-
     align-items: center;
 
     gap: 30px;
@@ -228,7 +232,6 @@ nav a {
     font-weight: 700;
 
     text-decoration: none;
-
     white-space: nowrap;
 
     transition:
@@ -283,7 +286,6 @@ h1 {
     color: #333;
 
     font-size: 64px;
-
     line-height: 1.2;
 }
 
@@ -293,7 +295,6 @@ h1 {
     color: #666;
 
     font-size: 18px;
-
     line-height: 2;
 }
 
@@ -367,7 +368,6 @@ h1 {
     position: absolute;
 
     top: 18px;
-
     left: 0;
     right: 0;
 
@@ -392,7 +392,6 @@ h1 {
     object-fit: contain;
 
     border: 0;
-
     box-shadow: none;
 }
 
@@ -419,7 +418,6 @@ h1 {
 
 .buttons {
     display: flex;
-
     flex-wrap: wrap;
 
     gap: 15px;
@@ -435,7 +433,6 @@ h1 {
     border-radius: 30px;
 
     background: #6c63ff;
-
     color: #fff;
 
     font-size: 14px;
@@ -458,7 +455,6 @@ h1 {
 
 .button.secondary {
     background: #fff;
-
     color: #6c63ff;
 
     border:
@@ -473,7 +469,6 @@ h1 {
 
 .section {
     width: 100%;
-
     max-width: 1000px;
 
     margin: 0 auto;
@@ -500,7 +495,6 @@ h2 {
     color: #333;
 
     font-size: 36px;
-
     line-height: 1.4;
 
     text-align: center;
@@ -533,7 +527,6 @@ h2 {
     color: #666;
 
     font-size: 17px;
-
     line-height: 2;
 }
 
@@ -549,12 +542,13 @@ h2 {
 .profile-intro {
     max-width: 600px;
 
-    margin: -20px auto 45px;
+    margin:
+        -20px auto
+        45px;
 
     color: #888;
 
     font-size: 15px;
-
     line-height: 1.8;
 
     text-align: center;
@@ -587,7 +581,6 @@ h2 {
     color: #666;
 
     font-size: 16px;
-
     line-height: 2;
 }
 
@@ -597,7 +590,6 @@ h2 {
 
 .profile-card-title {
     display: flex;
-
     align-items: center;
 
     gap: 10px;
@@ -607,7 +599,6 @@ h2 {
     color: #6c63ff;
 
     font-size: 13px;
-
     font-weight: 700;
 
     letter-spacing: 2px;
@@ -615,7 +606,6 @@ h2 {
 
 .profile-card-title span {
     font-size: 22px;
-
     letter-spacing: 0;
 }
 
@@ -634,7 +624,6 @@ h2 {
 
 .profile-mini-card {
     width: 100%;
-
     min-width: 0;
 
     padding: 30px;
@@ -670,7 +659,6 @@ h2 {
     height: 55px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -699,7 +687,6 @@ h2 {
     color: #777;
 
     font-size: 14px;
-
     line-height: 1.9;
 }
 
@@ -709,9 +696,7 @@ h2 {
 
 .profile-message {
     display: flex;
-
     align-items: center;
-
     justify-content: center;
 
     gap: 15px;
@@ -740,7 +725,6 @@ h2 {
     margin: 0;
 
     font-size: 15px;
-
     line-height: 1.8;
 }
 
@@ -764,15 +748,12 @@ h2 {
 
 .blog-card {
     width: 100%;
-
     min-width: 0;
-
     max-width: 100%;
 
     overflow: hidden;
 
     display: flex;
-
     flex-direction: column;
 
     background:
@@ -808,13 +789,12 @@ h2 {
 
 .blog-image {
     width: 100%;
-
     height: 220px;
 
-    flex: 0 0 220px;
+    flex:
+        0 0 220px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -824,7 +804,6 @@ h2 {
     padding: 0;
 
     border: 0;
-
     outline: 0;
 
     background: #f1f0ff;
@@ -851,11 +830,9 @@ h2 {
     max-width: none;
 
     object-fit: cover;
-
     object-position: center center;
 
     border: 0;
-
     outline: 0;
 
     box-shadow: none;
@@ -875,7 +852,6 @@ h2 {
 
 .blog-content {
     width: 100%;
-
     min-width: 0;
 
     flex: 1;
@@ -889,7 +865,6 @@ h2 {
     color: #6c63ff;
 
     font-size: 11px;
-
     font-weight: 700;
 
     letter-spacing: 2px;
@@ -901,7 +876,6 @@ h2 {
     color: #333;
 
     font-size: 20px;
-
     line-height: 1.5;
 }
 
@@ -911,7 +885,6 @@ h2 {
     color: #777;
 
     font-size: 14px;
-
     line-height: 1.8;
 }
 
@@ -924,84 +897,276 @@ h2 {
     width: 100%;
 
     display: flex;
-
     flex-direction: column;
 
     gap: 15px;
 }
 
-.link-card {
-    width: 100%;
 
-    min-width: 0;
+/* =========================================================
+   LINK CARD
+========================================================= */
+
+.link-card {
+    position: relative;
 
     display: flex;
-
     align-items: center;
 
-    gap: 18px;
+    width: 100%;
+    min-width: 0;
+    min-height: 72px;
 
-    padding: 20px 25px;
-
-    background: #fff;
-
-    border-radius: 20px;
+    padding: 12px 18px;
 
     color: #333;
 
     text-decoration: none;
 
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.88),
+            rgba(255, 255, 255, 0.62)
+        );
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.9);
+
+    border-radius: 22px;
+
     box-shadow:
-        0 8px 25px
-        rgba(0, 0, 0, 0.06);
+        0 10px 30px
+        rgba(0, 0, 0, 0.06),
+
+        0 2px 8px
+        rgba(0, 0, 0, 0.03),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 0.95);
+
+    backdrop-filter: blur(16px);
+    -webkit-backdrop-filter: blur(16px);
+
+    overflow: hidden;
 
     transition:
-        transform 0.3s ease,
-        box-shadow 0.3s ease;
+        transform 0.28s ease,
+        box-shadow 0.28s ease,
+        background 0.28s ease;
 }
+
+
+/* =========================================================
+   LINK LIGHT EFFECT
+========================================================= */
+
+.link-card::before {
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+    left: -120%;
+
+    width: 80%;
+    height: 100%;
+
+    background:
+        linear-gradient(
+            90deg,
+            transparent,
+            rgba(255, 255, 255, 0.55),
+            transparent
+        );
+
+    transform: skewX(-20deg);
+
+    transition:
+        left 0.6s ease;
+
+    pointer-events: none;
+}
+
+.link-card:hover::before {
+    left: 130%;
+}
+
+
+/* =========================================================
+   LINK HOVER
+========================================================= */
 
 .link-card:hover {
     transform: translateY(-4px);
 
+    background:
+        linear-gradient(
+            135deg,
+            rgba(255, 255, 255, 0.96),
+            rgba(255, 255, 255, 0.76)
+        );
+
     box-shadow:
-        0 12px 30px
-        rgba(0, 0, 0, 0.1);
+        0 16px 40px
+        rgba(0, 0, 0, 0.09),
+
+        0 4px 12px
+        rgba(0, 0, 0, 0.04),
+
+        inset 0 1px 0
+        rgba(255, 255, 255, 1);
 }
+
+.link-card:active {
+    transform:
+        translateY(-1px)
+        scale(0.99);
+}
+
+
+/* =========================================================
+   LINK ICON
+========================================================= */
 
 .link-icon {
+    position: relative;
+
+    z-index: 2;
+
     flex-shrink: 0;
 
-    font-size: 30px;
+    width: 46px;
+    height: 46px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    margin-right: 14px;
+
+    border-radius: 15px;
+
+    font-size: 22px;
+    font-weight: 700;
+
+    transition:
+        transform 0.28s ease,
+        box-shadow 0.28s ease;
 }
+
+.link-card:hover .link-icon {
+    transform:
+        scale(1.08)
+        rotate(-3deg);
+}
+
+
+/* =========================================================
+   X ICON
+========================================================= */
+
+.x-icon {
+    color: #fff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #111,
+            #333
+        );
+
+    box-shadow:
+        0 6px 16px
+        rgba(0, 0, 0, 0.18);
+}
+
+
+/* =========================================================
+   LINK TEXT
+========================================================= */
 
 .link-info {
+    position: relative;
+
+    z-index: 2;
+
+    display: flex;
+    flex-direction: column;
+
     min-width: 0;
+
+    flex: 1;
 }
 
-.link-card strong {
-    display: block;
+.link-name {
+    color: #333;
 
     font-size: 17px;
+    font-weight: 700;
+
+    line-height: 1.4;
 }
 
-.link-card small {
-    display: block;
-
-    margin-top: 4px;
+.link-description {
+    margin-top: 2px;
 
     color: #888;
 
     font-size: 13px;
+
+    line-height: 1.4;
+
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
 }
 
-.arrow {
+
+/* =========================================================
+   LINK ARROW
+========================================================= */
+
+.link-arrow {
+    position: relative;
+
+    z-index: 2;
+
+    width: 36px;
+    height: 36px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
     flex-shrink: 0;
 
-    margin-left: auto;
+    margin-left: 10px;
 
-    color: #6c63ff;
+    border-radius: 50%;
 
-    font-size: 22px;
+    color: #777;
+
+    background:
+        rgba(255, 255, 255, 0.55);
+
+    font-size: 18px;
+
+    transition:
+        transform 0.28s ease,
+        background 0.28s ease,
+        color 0.28s ease;
+}
+
+.link-card:hover .link-arrow {
+    color: #222;
+
+    background:
+        rgba(255, 255, 255, 0.9);
+
+    transform:
+        translate(3px, -3px);
 }
 
 
@@ -1039,7 +1204,6 @@ footer {
     height: 100dvh;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -1054,9 +1218,7 @@ footer {
     z-index: 999999;
 
     opacity: 0;
-
     visibility: hidden;
-
     pointer-events: none;
 
     transition:
@@ -1110,7 +1272,6 @@ footer {
     height: 50px;
 
     display: flex;
-
     align-items: center;
     justify-content: center;
 
@@ -1126,7 +1287,6 @@ footer {
     color: #fff;
 
     font-size: 32px;
-
     line-height: 1;
 
     cursor: pointer;
@@ -1143,7 +1303,8 @@ footer {
     background:
         rgba(255, 255, 255, 0.25);
 
-    transform: scale(1.05);
+    transform:
+        scale(1.05);
 }
 
 @keyframes imageViewerIn {
@@ -1251,12 +1412,12 @@ footer {
         gap: 30px;
 
         padding:
-            60px 20px 80px;
+            60px 20px
+            80px;
     }
 
     .hero-text {
         width: 100%;
-
         max-width: 100%;
     }
 
@@ -1268,7 +1429,8 @@ footer {
 
     h1 {
         margin:
-            12px 0 18px;
+            12px 0
+            18px;
 
         font-size: 38px;
 
@@ -1371,7 +1533,8 @@ footer {
 
     .profile-intro {
         margin:
-            -15px auto 35px;
+            -15px auto
+            35px;
 
         font-size: 14px;
     }
@@ -1434,7 +1597,6 @@ footer {
 
     .blog-card {
         width: 100%;
-
         max-width: 100%;
     }
 
@@ -1458,13 +1620,43 @@ footer {
 
     /* Links */
 
+    .links {
+        gap: 12px;
+    }
+
     .link-card {
+        min-height: 66px;
+
         padding:
-            17px 18px;
+            10px 14px;
+
+        border-radius: 18px;
     }
 
     .link-icon {
-        font-size: 26px;
+        width: 42px;
+        height: 42px;
+
+        margin-right: 12px;
+
+        border-radius: 13px;
+
+        font-size: 20px;
+    }
+
+    .link-name {
+        font-size: 16px;
+    }
+
+    .link-description {
+        font-size: 12px;
+    }
+
+    .link-arrow {
+        width: 32px;
+        height: 32px;
+
+        font-size: 16px;
     }
 
 
@@ -1570,6 +1762,26 @@ footer {
         padding: 20px;
     }
 
+    .link-card {
+        padding:
+            9px 12px;
+    }
+
+    .link-icon {
+        width: 40px;
+        height: 40px;
+
+        margin-right: 10px;
+    }
+
+    .link-name {
+        font-size: 15px;
+    }
+
+    .link-description {
+        font-size: 11px;
+    }
+
 }
 
 
@@ -1609,8 +1821,20 @@ footer {
         transform: none;
 
         box-shadow:
-            0 8px 25px
+            0 10px 30px
             rgba(0, 0, 0, 0.06);
+    }
+
+    .link-card:hover .link-icon {
+        transform: none;
+    }
+
+    .link-card:hover .link-arrow {
+        transform: none;
+    }
+
+    .link-card:hover::before {
+        left: -120%;
     }
 
 }
@@ -1636,4 +1860,131 @@ footer {
         transition-duration: 0.01ms !important;
     }
 
+}
+/* =========================================================
+   INSTAGRAM ICON
+========================================================= */
+
+.instagram-icon {
+    position: relative;
+
+    color: #fff;
+
+    background:
+        linear-gradient(
+            135deg,
+            #f9ce34,
+            #ee2a7b,
+            #6228d7
+        );
+
+    box-shadow:
+        0 6px 18px
+        rgba(214, 62, 134, 0.22);
+
+    font-size: 28px;
+    font-weight: 400;
+
+    line-height: 1;
+}
+
+
+/* Instagram camera outline */
+
+.instagram-icon::before {
+    content: "";
+
+    position: absolute;
+
+    width: 21px;
+    height: 21px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.95);
+
+    border-radius: 6px;
+}
+
+
+/* Instagram camera lens */
+
+.instagram-icon::after {
+    content: "";
+
+    position: absolute;
+
+    width: 7px;
+    height: 7px;
+
+    border:
+        2px solid
+        rgba(255, 255, 255, 0.95);
+
+    border-radius: 50%;
+
+    box-shadow:
+        7px -7px 0 -2px
+        rgba(255, 255, 255, 0.95);
+}
+
+
+/* =========================================================
+   THE HIVE ICON
+========================================================= */
+
+.hive-icon {
+    color: #fff;
+
+    background:
+        linear-gradient(
+            145deg,
+            #6c63ff,
+            #5148d8
+        );
+
+    box-shadow:
+        0 6px 18px
+        rgba(108, 99, 255, 0.25);
+
+    font-size: 22px;
+    font-weight: 800;
+
+    letter-spacing: -1px;
+}
+
+
+/* Hive decoration */
+
+.hive-icon::before {
+    content: "";
+
+    position: absolute;
+
+    inset: 5px;
+
+    border:
+        1px solid
+        rgba(255, 255, 255, 0.25);
+
+    border-radius: 12px;
+
+    pointer-events: none;
+}
+
+
+/* =========================================================
+   LINK ICON HOVER
+========================================================= */
+
+.link-card:hover .instagram-icon {
+    box-shadow:
+        0 9px 24px
+        rgba(214, 62, 134, 0.32);
+}
+
+.link-card:hover .hive-icon {
+    box-shadow:
+        0 9px 24px
+        rgba(108, 99, 255, 0.35);
 }
