@@ -2,369 +2,947 @@
 <html lang="ja">
 
 <head>
+
     <meta charset="UTF-8">
 
-    <!-- スマホ対応 -->
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
-    <!-- サイトタイトル -->
     <title>RCA/ぴよぉのホームページ</title>
 
-    <!-- CSS -->
-    <link rel="stylesheet" href="style.css?v=5">
+    <link
+        rel="stylesheet"
+        href="style.css?v=5"
+    >
 
-    <!-- ファビコン -->
-    <link rel="icon" type="image/png" href="cat.png?v=5">
+    <link
+        rel="icon"
+        type="image/png"
+        href="cat.png?v=5"
+    >
+
 </head>
 
 
 <body>
 
-    <!-- =========================
-         Loading
-    ========================== -->
 
-    <div id="loading">
+<!-- =========================
+     Loading
+========================= -->
 
-        <img src="cat.png?v=5" alt="Loading">
+<div id="loading">
+
+    <div class="loading-image-box">
+
+        <img
+            src="irasuto.png"
+            alt="Loading"
+        >
+
+    </div>
+
+    <p>
+        Loading<span class="dots">...</span>
+    </p>
+
+</div>
+
+
+
+<!-- =========================
+     Header
+========================= -->
+
+<header>
+
+    <div class="logo">
+        RCA/ぴよぉ
+    </div>
+
+
+    <nav>
+
+        <a href="#home">
+            HOME
+        </a>
+
+        <a href="#profile">
+            PROFILE
+        </a>
+
+        <a href="#blog">
+            BLOG
+        </a>
+
+        <a href="#links">
+            LINKS
+        </a>
+
+        <a href="#about">
+            ABOUT
+        </a>
+
+    </nav>
+
+</header>
+
+
+
+<!-- =========================
+     Main
+========================= -->
+
+<main>
+
+
+<!-- =========================
+     HOME
+========================= -->
+
+<section
+    id="home"
+    class="hero"
+>
+
+    <div class="hero-text">
+
+        <p class="small-title">
+            WELCOME TO MY WEBSITE
+        </p>
+
+
+        <h1>
+            こんにちは！
+        </h1>
+
+
+        <p class="description">
+
+            RCA/ぴよぉのホームページへようこそ。<br>
+
+            ここでは私のことや、<br>
+
+            いろいろな作品を紹介しています。
+
+        </p>
+
+
+        <div class="buttons">
+
+            <a
+                href="#profile"
+                class="button"
+            >
+                PROFILE
+            </a>
+
+
+            <a
+                href="#blog"
+                class="button secondary"
+            >
+                BLOG
+            </a>
+
+        </div>
+
+    </div>
+
+
+
+    <!-- メイン画像 -->
+
+    <div class="hero-image">
+
+        <div class="image-card">
+
+            <span class="image-label">
+                WELCOME
+            </span>
+
+            <img
+                src="cat.png?v=5"
+                alt="猫のイラスト"
+            >
+
+        </div>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     PROFILE
+========================= -->
+
+<section
+    id="profile"
+    class="section profile-section"
+>
+
+    <p class="section-title">
+        PROFILE
+    </p>
+
+
+    <h2>
+        ぴよぉについて
+    </h2>
+
+
+    <p class="profile-intro">
+
+        RCA/ぴよぉのことを
+        もう少し詳しく紹介します。
+
+    </p>
+
+
+
+    <!-- ABOUT ME -->
+
+    <div class="profile-card">
+
+        <div class="profile-card-title">
+
+            <span>
+                👋
+            </span>
+
+            ABOUT ME
+
+        </div>
+
 
         <p>
-            Loading<span class="dots">...</span>
+
+            こんにちは！ぴよぉです。<br>
+
+            このサイトを見つけてくださって
+            ありがとうございます！
+
+        </p>
+
+
+        <p>
+
+            普段はゲームを遊んだり、
+            PCを触ったり、
+            Webサイトや動画などを作ったりしています。
+
+            「こんなの作ってみたい！」と思ったものを、
+            実際に形にしていくのが好きです。
+
         </p>
 
     </div>
 
 
-    <!-- =========================
-         Header
-    ========================== -->
 
-    <header>
+    <!-- PROFILE GRID -->
 
-        <div class="logo">
-            RCA/ぴよぉ
+    <div class="profile-grid">
+
+
+        <div class="profile-mini-card">
+
+            <div class="profile-icon">
+                🎮
+            </div>
+
+            <h3>
+                GAME
+            </h3>
+
+            <p>
+
+                Minecraftなどのゲームが好きです。<br>
+
+                自分で遊ぶだけでなく、
+                いろいろなものを作るのも好きです。
+
+            </p>
+
         </div>
 
-        <nav>
-
-            <a href="#home">
-                HOME
-            </a>
-
-            <a href="#profile">
-                PROFILE
-            </a>
-
-            <a href="#links">
-                LINKS
-            </a>
-
-            <a href="#about">
-                ABOUT
-            </a>
-
-        </nav>
-
-    </header>
 
 
-    <!-- =========================
-         Main
-    ========================== -->
+        <div class="profile-mini-card">
 
-    <main>
-
-
-        <!-- =========================
-             HOME
-        ========================== -->
-
-        <section id="home" class="hero">
-
-            <div class="hero-text">
-
-                <p class="small-title">
-                    WELCOME TO MY WEBSITE
-                </p>
-
-                <h1>
-                    こんにちは！
-                </h1>
-
-                <p class="description">
-
-                    RCA/ぴよぉのホームページへようこそ。<br>
-
-                    ここでは私のことや、<br>
-                    いろいろな作品を紹介しています。
-
-                </p>
-
-
-                <div class="buttons">
-
-                    <a
-                        href="#profile"
-                        class="button"
-                    >
-                        PROFILE
-                    </a>
-
-
-                    <a
-                        href="#links"
-                        class="button secondary"
-                    >
-                        LINKS
-                    </a>
-
-                </div>
-
+            <div class="profile-icon">
+                💻
             </div>
 
+            <h3>
+                PC
+            </h3>
 
-            <!-- メイン画像 -->
+            <p>
 
-            <div class="hero-image">
+                PCやスマートフォンなどの
+                デジタル機器を触るのが好きです。<br>
 
-                <img
-                    src="cat.png?v=5"
-                    alt="猫のイラスト"
-                >
+                新しいことを試すのも大好きです。
 
-            </div>
-
-        </section>
-
-
-
-        <!-- =========================
-             PROFILE
-        ========================== -->
-
-        <section
-            id="profile"
-            class="section"
-        >
-
-            <p class="section-title">
-                PROFILE
             </p>
 
-
-            <h2>
-                ぴよぉについて
-            </h2>
+        </div>
 
 
-            <div class="card">
 
-                <p>
+        <div class="profile-mini-card">
 
-                    こんにちは！ぴよぉです。<br>
-
-                    このサイトでは、趣味や制作したものなどを紹介しています。
-
-                </p>
-
+            <div class="profile-icon">
+                🎨
             </div>
 
-        </section>
+            <h3>
+                CREATE
+            </h3>
 
+            <p>
 
+                Webサイトや画像、動画、音楽など、
+                いろいろな作品を作っています。
 
-        <!-- =========================
-             LINKS
-        ========================== -->
-
-        <section
-            id="links"
-            class="section"
-        >
-
-            <p class="section-title">
-                LINKS
             </p>
 
-
-            <h2>
-                MY LINKS
-            </h2>
-
-
-            <div class="links">
-
-
-                <!-- The Hive -->
-
-                <a
-                    href="https://playhive.com/profile/RCAprayers"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="link-card"
-                >
-
-                    <span class="link-icon">
-                        🐝
-                    </span>
-
-
-                    <span class="link-info">
-
-                        <strong>
-                            The Hive
-                        </strong>
-
-                        <small>
-                            RCAprayers
-                        </small>
-
-                    </span>
-
-
-                    <span class="arrow">
-                        →
-                    </span>
-
-                </a>
+        </div>
 
 
 
-                <!-- Instagram -->
+        <div class="profile-mini-card">
 
-                <a
-                    href="https://www.instagram.com/yuki37136/?hl=ja"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    class="link-card"
-                >
-
-                    <span class="link-icon">
-                        📷
-                    </span>
-
-
-                    <span class="link-info">
-
-                        <strong>
-                            Instagram
-                        </strong>
-
-                        <small>
-                            @yuki37136
-                        </small>
-
-                    </span>
-
-
-                    <span class="arrow">
-                        →
-                    </span>
-
-                </a>
-
+            <div class="profile-icon">
+                🌱
             </div>
 
-        </section>
+            <h3>
+                CHALLENGE
+            </h3>
 
+            <p>
 
+                「やってみたい！」と思ったことは、
+                できるところから挑戦しています。
 
-        <!-- =========================
-             ABOUT
-        ========================== -->
-
-        <section
-            id="about"
-            class="section"
-        >
-
-            <p class="section-title">
-                ABOUT
             </p>
 
+        </div>
 
-            <h2>
-                このサイトについて
-            </h2>
-
-
-            <div class="card">
-
-                <p>
-
-                    このホームページは<br>
-
-                    HTML・CSS・JavaScriptを使って<br>
-
-                    制作しています。
-
-                </p>
-
-            </div>
-
-        </section>
-
-
-    </main>
+    </div>
 
 
 
-    <!-- =========================
-         Footer
-    ========================== -->
+    <!-- THIS WEBSITE -->
 
-    <footer>
+    <div class="profile-card site-message">
+
+        <div class="profile-card-title">
+
+            <span>
+                ✨
+            </span>
+
+            THIS WEBSITE
+
+        </div>
+
 
         <p>
-            © 2026 RCA/ぴよぉ
+
+            このホームページは、
+            HTML・CSS・JavaScriptを使って
+            少しずつ制作しています。
+
         </p>
 
-    </footer>
+
+        <p>
+
+            デザインを考えたり、
+            新しい機能を追加したりしながら、
+            自分だけのホームページを作っています。
+
+        </p>
+
+
+        <p>
+
+            これからも少しずつ更新して、
+            「また見に来たい」と思ってもらえるような
+            サイトにしていきたいです。
+
+        </p>
+
+    </div>
 
 
 
-    <!-- =========================
-         Loading Script
-    ========================== -->
+    <!-- MESSAGE -->
 
-    <script>
+    <div class="profile-message">
 
-        document.addEventListener(
-            "DOMContentLoaded",
+        <span>
+            ☁️
+        </span>
+
+        <p>
+
+            ゆっくり更新していくので、<br>
+
+            ぜひまた遊びに来てください！
+
+        </p>
+
+        <span>
+            ✨
+        </span>
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     BLOG
+========================= -->
+
+<section
+    id="blog"
+    class="section"
+>
+
+    <p class="section-title">
+        BLOG
+    </p>
+
+
+    <h2>
+        BLOG
+    </h2>
+
+
+
+    <div class="blog-grid">
+
+
+        <!-- =====================
+             BLOG 1
+        ====================== -->
+
+        <article class="blog-card">
+
+
+            <button
+                class="blog-image"
+                type="button"
+                onclick="openImage('gazou1.png')"
+            >
+
+                <img
+                    src="gazou1.png"
+                    alt="ブログ画像1"
+                >
+
+            </button>
+
+
+            <div class="blog-content">
+
+                <p class="blog-number">
+                    BLOG 01
+                </p>
+
+
+                <h3>
+                    ハワイに行きました✨
+                </h3>
+
+
+                <p>
+
+                    ずっと前から計画していたハワイに行くことができました！
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================
+             BLOG 2
+        ====================== -->
+
+        <article class="blog-card">
+
+
+            <button
+                class="blog-image"
+                type="button"
+                onclick="openImage('gazou2.png')"
+            >
+
+                <img
+                    src="gazou2.png"
+                    alt="ブログ画像2"
+                >
+
+            </button>
+
+
+            <div class="blog-content">
+
+                <p class="blog-number">
+                    BLOG 02
+                </p>
+
+
+                <h3>
+                    ヘッドフォンを買いました。🎧
+                </h3>
+
+
+                <p>
+
+                アークティスノヴァproを誕生日記念として買ってもらいました！<br>
+                親に感謝😭
+                    
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================
+             BLOG 3
+        ====================== -->
+
+        <article class="blog-card">
+
+
+            <button
+                class="blog-image"
+                type="button"
+                onclick="openImage('gazou3.png')"
+            >
+
+                <img
+                    src="gazou3.png"
+                    alt="ブログ画像3"
+                >
+
+            </button>
+
+
+            <div class="blog-content">
+
+                <p class="blog-number">
+                    BLOG 03
+                </p>
+
+
+                <h3>
+                    花火大会🎆
+                </h3>
+
+
+                <p>
+
+                    友達と一緒に花火を見ました。<br>
+                    ドパるのも悪くないですね笑
+                    
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+
+        <!-- =====================
+             BLOG 4
+        ====================== -->
+
+        <article class="blog-card">
+
+
+            <button
+                class="blog-image"
+                type="button"
+                onclick="openImage('gazou4.png')"
+            >
+
+                <img
+                    src="gazou4.png"
+                    alt="ブログ画像4"
+                >
+
+            </button>
+
+
+            <div class="blog-content">
+
+                <p class="blog-number">
+                    BLOG 04
+                </p>
+
+
+                <h3>
+                    ブログ4
+                </h3>
+
+
+                <p>
+
+                    後ほど追加します...
+                    
+
+                </p>
+
+            </div>
+
+        </article>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     LINKS
+========================= -->
+
+<section
+    id="links"
+    class="section"
+>
+
+    <p class="section-title">
+        LINKS
+    </p>
+
+
+    <h2>
+        MY LINKS
+    </h2>
+
+
+    <div class="links">
+
+
+        <!-- The Hive -->
+
+        <a
+            href="https://playhive.com/profile/RCAprayers"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+        >
+
+            <span class="link-icon">
+                🐝
+            </span>
+
+
+            <span class="link-info">
+
+                <strong>
+                    The Hive
+                </strong>
+
+
+                <small>
+                    RCAprayers
+                </small>
+
+            </span>
+
+
+            <span class="arrow">
+                →
+            </span>
+
+        </a>
+
+
+
+        <!-- Instagram -->
+
+        <a
+            href="https://www.instagram.com/yuki37136/?hl=ja"
+            target="_blank"
+            rel="noopener noreferrer"
+            class="link-card"
+        >
+
+            <span class="link-icon">
+                📷
+            </span>
+
+
+            <span class="link-info">
+
+                <strong>
+                    Instagram
+                </strong>
+
+
+                <small>
+                    @yuki37136
+                </small>
+
+            </span>
+
+
+            <span class="arrow">
+                →
+            </span>
+
+        </a>
+
+
+    </div>
+
+</section>
+
+
+
+<!-- =========================
+     ABOUT
+========================= -->
+
+<section
+    id="about"
+    class="section"
+>
+
+    <p class="section-title">
+        ABOUT
+    </p>
+
+
+    <h2>
+        このサイトについて
+    </h2>
+
+
+    <div class="card">
+
+        <p>
+
+            このホームページは<br>
+
+            HTML・CSS・JavaScriptを使って<br>
+
+            制作しています。
+
+        </p>
+
+    </div>
+
+</section>
+
+
+</main>
+
+
+
+<!-- =========================
+     Footer
+========================= -->
+
+<footer>
+
+    <p>
+        © 2026 RCA/ぴよぉ
+    </p>
+
+</footer>
+
+
+
+<!-- =========================
+     Image Viewer
+========================= -->
+
+<div
+    id="imageViewer"
+    class="image-viewer"
+    onclick="closeImage(event)"
+>
+
+
+    <button
+        class="image-viewer-close"
+        type="button"
+        onclick="closeImage()"
+        aria-label="閉じる"
+    >
+
+        ×
+
+    </button>
+
+
+    <img
+        id="viewerImage"
+        src=""
+        alt="拡大画像"
+    >
+
+</div>
+
+
+
+<!-- =========================
+     Loading Script
+========================= -->
+
+<script>
+
+document.addEventListener(
+    "DOMContentLoaded",
+    function () {
+
+        const loading =
+            document.getElementById(
+                "loading"
+            );
+
+
+        setTimeout(
             function () {
 
-                const loading =
-                    document.getElementById("loading");
+                loading.classList.add(
+                    "hide"
+                );
 
 
-                /*
-                 * ページが表示されたあと
-                 * 1秒待ってLoadingを消す
-                 */
+                setTimeout(
+                    function () {
 
-                setTimeout(function () {
+                        loading.style.display =
+                            "none";
 
-                    loading.classList.add("hide");
+                    },
+                    500
+                );
 
-
-                    /*
-                     * フェードアウト終了後に
-                     * Loadingを完全に消す
-                     */
-
-                    setTimeout(function () {
-
-                        loading.style.display = "none";
-
-                    }, 500);
-
-                }, 1000);
-
-            }
-
+            },
+            1000
         );
 
-    </script>
+    }
+);
+
+
+
+/* =========================
+   Image Viewer
+========================= */
+
+function openImage(imagePath) {
+
+    const viewer =
+        document.getElementById(
+            "imageViewer"
+        );
+
+
+    const image =
+        document.getElementById(
+            "viewerImage"
+        );
+
+
+    image.src =
+        imagePath;
+
+
+    viewer.classList.add(
+        "show"
+    );
+
+
+    document.body.style.overflow =
+        "hidden";
+
+}
+
+
+
+function closeImage(event) {
+
+    /*
+     * 拡大された画像そのものを
+     * タップした場合は閉じない
+     */
+
+    if (
+        event &&
+        event.target.id ===
+        "viewerImage"
+    ) {
+
+        return;
+
+    }
+
+
+    const viewer =
+        document.getElementById(
+            "imageViewer"
+        );
+
+
+    viewer.classList.remove(
+        "show"
+    );
+
+
+    document.body.style.overflow =
+        "";
+
+}
+
+
+
+/* =========================
+   ESCキー
+========================= */
+
+document.addEventListener(
+    "keydown",
+    function (event) {
+
+        if (
+            event.key ===
+            "Escape"
+        ) {
+
+            closeImage();
+
+        }
+
+    }
+);
+
+</script>
 
 
 </body>
