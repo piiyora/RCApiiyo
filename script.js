@@ -13,8 +13,26 @@ document.addEventListener(
             document.getElementById("loadingImage");
 
 
+        // Loadingが存在しない場合
+        if (!loading) {
+            return;
+        }
+
+
+        // =========================
+        // スクロールロック
+        // =========================
+
+        document.body.classList.add(
+            "loading-active"
+        );
+
+
+        // =========================
         // 最低表示時間
-        const minimumTime = 2500;
+        // =========================
+
+        const minimumTime = 2000;
 
         const startTime = Date.now();
 
@@ -34,13 +52,26 @@ document.addEventListener(
             setTimeout(
                 function () {
 
+                    // Loadingをフェードアウト
                     loading.classList.add("hide");
 
+
+                    // フェードアウト終了後
                     setTimeout(
                         function () {
 
                             loading.style.display =
                                 "none";
+
+
+                            // =========================
+                            // スクロールロック解除
+                            // =========================
+
+                            document.body.classList.remove(
+                                "loading-active"
+                            );
+
 
                         },
                         800
@@ -52,22 +83,36 @@ document.addEventListener(
         }
 
 
-        // 画像が読み込まれているか確認
-        if (loadingImage.complete) {
+        // =========================
+        // 画像読み込み確認
+        // =========================
 
-            finishLoading();
+        if (loadingImage) {
+
+            if (loadingImage.complete) {
+
+                finishLoading();
+
+            } else {
+
+                loadingImage.addEventListener(
+                    "load",
+                    finishLoading,
+                    { once: true }
+                );
+
+                loadingImage.addEventListener(
+                    "error",
+                    finishLoading,
+                    { once: true }
+                );
+
+            }
 
         } else {
 
-            loadingImage.addEventListener(
-                "load",
-                finishLoading
-            );
-
-            loadingImage.addEventListener(
-                "error",
-                finishLoading
-            );
+            // 画像がない場合もLoadingを終了
+            finishLoading();
 
         }
 
@@ -369,3 +414,144 @@ if (loadingElement) {
     );
 
 }
+// =========================
+// Cat Tap System
+// =========================
+
+document.addEventListener("DOMContentLoaded", function () {
+
+    const cat = document.getElementById("cat");
+    const sound = document.getElementById("catSound");
+
+    if (!cat) {
+        console.error("cat が見つかりません");
+        return;
+    }
+
+    if (!sound) {
+        console.error("catSound が見つかりません");
+        return;
+    }
+
+    let tapCount = 0;
+
+    cat.addEventListener("click", function () {
+
+        tapCount++;
+
+        console.log("猫ちゃんタップ:", tapCount);
+
+        // -------------------------
+        // 音
+        // -------------------------
+
+        sound.currentTime = 0;
+
+        sound.play().catch(function (error) {
+            console.error("音声エラー:", error);
+        });
+
+
+        // -------------------------
+        // 10回目
+        // -------------------------
+
+        if (tapCount === 10) {
+
+            console.log("🎉 10回目の特別演出！");
+
+
+            // 猫ちゃんポンッ！
+            cat.classList.remove("cat-big");
+
+            void cat.offsetWidth;
+
+            cat.classList.add("cat-big");
+
+
+            // -------------------------
+            // こんにちは！を動かす
+            // -------------------------
+
+            const title =
+                document.querySelector(".hero-text h1");
+
+            if (title) {
+
+                title.classList.remove("text-burst");
+
+                void title.offsetWidth;
+
+                title.classList.add("text-burst");
+
+            }
+// -------------------------
+// SECRET FOUND!
+// -------------------------
+
+const secret = document.createElement("div");
+
+secret.className = "secret-found";
+
+secret.innerHTML = `
+    <span>✨ SECRET FOUND! ✨</span>
+    <small>10回タップ達成！🐱</small>
+`;
+
+document.body.appendChild(secret);
+
+setTimeout(function () {
+    secret.remove();
+}, 2500);
+
+            // -------------------------
+            // クラッカー
+            // -------------------------
+
+            for (let i = 0; i < 30; i++) {
+
+                const cracker =
+                    document.createElement("div");
+
+                cracker.textContent = "🎉";
+
+                cracker.style.position = "fixed";
+
+                cracker.style.left =
+                    Math.random() * 100 + "vw";
+
+                cracker.style.top =
+                    Math.random() * 70 + "vh";
+
+                cracker.style.fontSize = "28px";
+
+                cracker.style.zIndex = "999999";
+
+                cracker.style.pointerEvents = "none";
+
+                cracker.style.animation =
+                    "crackerFall 1.5s ease-out forwards";
+
+                document.body.appendChild(cracker);
+
+
+                setTimeout(function () {
+
+                    cracker.remove();
+
+                }, 1500);
+
+            }
+
+
+            // -------------------------
+            // カウントリセット
+            // -------------------------
+
+            tapCount = 0;
+
+        }
+
+    });
+
+});
